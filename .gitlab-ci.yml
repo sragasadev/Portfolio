@@ -1,0 +1,26 @@
+stages:
+    - build
+    - deploy
+
+build-front-end-job:
+    stage: build
+    image: node:lts-bullseye
+    variables:
+        PUBLIC_URL:
+    script:
+        - cd Portfolio
+        - npm install
+        - npm run build
+        - cp build/index.html build/404.html
+    artifacts:
+        paths:
+            - Portfolio/build/
+
+pages:
+    stage: deploy
+    rules:
+        - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    dependencies:
+        - build-front-end-job
+    needs:
+        - build-front-end-job

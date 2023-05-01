@@ -21,20 +21,6 @@ nav {
 	-webkit-backdrop-filter: blur(6.8px);
 }
 
-.nav-logo {
-	position: fixed;
-	top: 55px;
-	right: 15px;
-	height: 30px;
-	width: 90px;
-	/* glassmorphism */
-	background: rgba(255, 255, 255, 0.12);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(6.8px);
-	-webkit-backdrop-filter: blur(6.8px);
-}
-
 nav.visible {
 	top: 2.5%;
 	left: 2.5%;
@@ -45,6 +31,12 @@ nav.visible {
 	text-decoration: none;
 	color: rgb(255 255 255 / 96%);
 	height: 4rem;
+	display: grid;
+	place-items: center;
+}
+
+.nav-logo {
+	height: 1.75rem;
 	display: grid;
 	place-items: center;
 }
