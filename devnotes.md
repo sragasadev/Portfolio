@@ -1,2 +1,6 @@
 -   Scrapbook theme
 -   Parallax
+-   Scrolling animations
+    -   Load each section as I scroll down
+    -   Incorporate embedded video players
+    -   Incorporate spotify player?
