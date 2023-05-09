@@ -27,10 +27,5 @@ pages:
     stage: deploy
     rules:
         - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    dependencies:
-        - build-front-end-job
     needs:
         - build-front-end-job
-    artifacts:
-        paths:
-            - public
