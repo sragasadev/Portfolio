@@ -1,12 +1,6 @@
-stages:
-    - build
-    - deploy
-
-build-front-end-job:
-    stage: build
-    image: node:lts-bullseye
-    variables:
-        PUBLIC_URL: https://sragasa97.gitlab.io/
+image: node:lts-bullseye
+pages:
+    stage: deploy
     cache:
         key:
             files:
@@ -15,17 +9,11 @@ build-front-end-job:
         paths:
             - node_modules/
     script:
-        - cd Portfolio
         - npm install
         - npm run build
         - cp -a dist/. public/
     artifacts:
         paths:
             - public
-
-pages:
-    stage: deploy
     rules:
         - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
-    needs:
-        - build-front-end-job
