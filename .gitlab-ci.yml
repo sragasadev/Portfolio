@@ -10,6 +10,8 @@ pages:
             - node_modules/
     script:
         - npm install
+        - cd Portfolio
+        - npm install
         - npm run build
         - cp -a dist/. public/
     artifacts:
