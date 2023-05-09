@@ -6,7 +6,7 @@ build-front-end-job:
     stage: build
     image: node:lts-bullseye
     variables:
-        PUBLIC_URL:
+        PUBLIC_URL: https://sragasa97.gitlab.io/
     script:
         - cd Portfolio
         - npm install
@@ -24,3 +24,8 @@ pages:
         - build-front-end-job
     needs:
         - build-front-end-job
+    script:
+        - mv Portfolio/build/ public
+    artifacts:
+        paths:
+            - public
