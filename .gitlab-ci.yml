@@ -1,6 +1,10 @@
-image: node:lts-bullseye
-pages:
-    stage: deploy
+stages:
+    - build
+    - deploy
+
+build-front-end-job:
+    stage: build
+    image: node:lts-bullseye
     cache:
         key:
             files:
@@ -13,8 +17,17 @@ pages:
         - cd Portfolio
         - npm install
         - npm run build
+        - cp -a dist/. public/
     artifacts:
         paths:
-            - ./dist/
+            - Portfolio/public/
+
+pages:
+    stage: deploy
     rules:
         - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
+    script:
+        - mv Portfolio/public/ public
+    artifacts:
+        paths:
+            - public
