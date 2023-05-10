@@ -5,6 +5,7 @@ function App() {
 	return (
 		<>
 			<Nav />
+			{/* <h1 className="text-5xl">HI DIANA</h1> */}
 		</>
 	);
 }

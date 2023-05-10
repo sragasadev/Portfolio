@@ -1,0 +1,40 @@
+nav {
+	position: fixed;
+	top: 0.5rem;
+	left: 0.5rem;
+	translate: 0 -72px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+	padding: 0 1.5rem;
+	height: 3rem;
+	width: 95%;
+	transition: 0.3s;
+	/* glassmorphism */
+	background: rgba(255, 255, 255, 0.12);
+	border-radius: 16px;
+	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(6.8px);
+	-webkit-backdrop-filter: blur(6.8px);
+}
+
+nav.visible {
+	top: 2.5%;
+	left: 2.5%;
+	translate: 0px 0px;
+}
+
+.nav-item {
+	text-decoration: none;
+	color: rgb(255 255 255 / 96%);
+	height: 4rem;
+	display: grid;
+	place-items: center;
+}
+
+.nav-logo {
+	height: 1.75rem;
+	display: grid;
+	place-items: center;
+}

@@ -3,12 +3,7 @@ import PortfolioIcon from "../assets/portfolio_icon.png";
 import { ReactComponent as LinkedInIcon } from "../assets/linkedin-icon.svg";
 import { ReactComponent as GitlabIcon } from "../assets/gitlab-icon.svg";
 import { ReactComponent as ResumeIcon } from "../assets/resume-icon.svg";
-
-// import { ReactComponent as LinkedInSquare } from "../assets/linkedin-square.svg";
-// import { ReactComponent as GitlabSquare } from "../assets/gitlab-square.svg";
-// import { ReactComponent as ResumeSquare } from "../assets/resume-square.svg";
-
-import "../App.css";
+import "../components/css/nav.css";
 
 function Nav() {
 	const [isNavOpen, setIsNavOpen] = useState(false);
@@ -57,11 +52,6 @@ function Nav() {
 					<h2 className="nav-item">Resume</h2>
 					<h2 className="nav-item">Contact</h2>
 				</div>
-				{/* <div className="w-screen flex items-center justify-around">
-					<LinkedInSquare className="h-8" />
-					<GitlabSquare className="h-8" />
-					<ResumeSquare className="h-8" />
-				</div> */}
 				<div className="flex items-center justify-around gap-2">
 					<a
 						href="https://www.linkedin.com/in/shaunragasa/"
@@ -82,6 +72,7 @@ function Nav() {
 					>
 						<ResumeIcon className="nav-logo" />
 					</a>
+					<h1 className="text-5xl">HI DIANA & PAULA</h1>
 				</div>
 			</nav>
 		</>
