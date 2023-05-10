@@ -14,10 +14,9 @@ pages:
         - npm install
         - npm run build
         - ls
-        - cp -a public/ dist/.
+        - cp -a dist/
     artifacts:
         paths:
-            - public
             - dist
     rules:
         - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH
