@@ -13,8 +13,8 @@ pages:
         - cd Portfolio
         - npm install
         - npm run build
-        - cp -a dist/. public/
         - ls
+        - cp -a dist/. public/
     artifacts:
         paths:
             - public
