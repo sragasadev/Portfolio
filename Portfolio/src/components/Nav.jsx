@@ -72,7 +72,6 @@ function Nav() {
 					>
 						<ResumeIcon className="nav-logo" />
 					</a>
-					<h1 className="text-5xl">HI DIANA & PAULA & EMILY</h1>
 				</div>
 			</nav>
 		</>
