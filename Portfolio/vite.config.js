@@ -13,4 +13,7 @@ export default defineConfig({
 		strictPort: true,
 		port: 5173, // default Vite port
 	},
+	build: {
+		outDir: "public",
+	},
 });
