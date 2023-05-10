@@ -14,7 +14,7 @@ pages:
         - npm install
         - npm run build
         - ls
-        - cp -a dist/. dist/
+        - cp -a public/. dist/
     artifacts:
         paths:
             - dist
