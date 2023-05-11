@@ -4,3 +4,7 @@
     -   Load each section as I scroll down
     -   Incorporate embedded video players
     -   Incorporate spotify player?
+    -   scroll-behavior: smooth
+-   Calendly in contact section
+-   Divide portfolio into section tags
+-   Dialog elements
