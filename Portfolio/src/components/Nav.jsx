@@ -65,7 +65,7 @@ function Nav() {
 						<GitlabIcon className="nav-logo" />
 					</a>
 					<a
-						href="https://drive.google.com/file/d/1q1Dq2DOt4etw1dQTqOzg9ucIMk57d7Sp/view?usp=sharing"
+						href="https://drive.google.com/file/d/1PjY6bqQEBeuHqvUC4zZAjB1nhtxbTqUs/view?usp=sharing"
 						target="_blank"
 						rel="noopener noreferrer"
 						alt="Resume"
