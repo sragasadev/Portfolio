@@ -1,68 +1,43 @@
-import { useState, useRef, useEffect } from "react";
+import useScrollPosition from "./hooks/useScrollPosition";
 import PortfolioIcon from "../assets/portfolio_icon.png";
-import { ReactComponent as LinkedInIcon } from "../assets/linkedin-icon.svg";
-import { ReactComponent as GitlabIcon } from "../assets/gitlab-icon.svg";
-import { ReactComponent as ResumeIcon } from "../assets/resume-icon.svg";
 import "../components/css/nav.css";
 
 function Nav() {
-	const [isNavOpen, setIsNavOpen] = useState(false);
-	const [visible, setVisible] = useState(true);
-	const lastScrollTop = useRef(0);
+	const scrollPosition = useScrollPosition();
 
-	const handleClick = () => {
-		setIsNavOpen(!isNavOpen);
-	};
+	const glassmorphism =
+		"bg-[rgba(255,255,255,0.12)] rounded-2xl shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-sm";
 
-	const handleScroll = () => {
-		const { pageYOffset } = window;
-		if (pageYOffset > lastScrollTop.current) {
-			// downward scroll
-			setVisible(false);
-			console.log("downward");
-		} else if (pageYOffset < lastScrollTop.current) {
-			// upward scroll
-			setVisible(true);
-			console.log("upward");
-		}
-		// horizontal scroll
-		lastScrollTop.current = pageYOffset <= 0 ? 0 : pageYOffset;
-	};
+	const logoClasses =
+		"w-8 h-8 relative text-xl text-[#8FC0A9] rounded-full inline-flex justify-center items-center bg-transparent border-2 border-[#8FC0A9] overflow-hidden";
 
-	useEffect(() => {
-		window.addEventListener("scroll", handleScroll, { passive: true });
-		console.log("listening....");
-
-		return window.removeEventListener("scroll", handleScroll);
-	}, []);
+	const navHover =
+		"opacity-80 hover:opacity-100 hover:underline hover:underline-offset-8 hover:decoration-white focus:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#8FC0A9] dark:[&.active]:text-neutral-400";
 
 	return (
 		<>
-			<nav
-				className={`
-				${visible ? "visible" : ""}`}
-			>
+			<nav className={scrollPosition > 0 ? glassmorphism : ""}>
 				<div>
-					<img className="h-8 w-8 rounded-lg -ml-1" src={PortfolioIcon} alt="Portfolio Icon" />
+					<img className="h-10 w-auto rounded-lg" src={PortfolioIcon} alt="Portfolio Icon" />
 				</div>
-				<div className="flex items-center justify-around gap-5">
-					<h2 className="nav-item">About</h2>
-					<h2 className="nav-item">Skills</h2>
-					<h2 className="nav-item">Projects</h2>
-					<h2 className="nav-item">Resume</h2>
-					<h2 className="nav-item">Contact</h2>
+				<div className="flex items-center justify-center gap-8 font-lexend text-xs">
+					<h2 className={`nav-item ${navHover}`}>HOME</h2>
+					<h2 className="nav-item">ABOUT ME</h2>
+					<h2 className="nav-item">EXPERIENCE</h2>
+					<h2 className="nav-item">SKILLS</h2>
+					<h2 className="nav-item">CONTACT ME</h2>
 				</div>
-				<div className="flex items-center justify-around gap-2">
+				<div className="flex items-center justify-evenly gap-2 logoHover">
 					<a
 						href="https://www.linkedin.com/in/shaunragasa/"
 						target="_blank"
 						rel="noopener noreferrer"
 						alt="LinkedIn"
 					>
-						<LinkedInIcon className="nav-logo" />
+						<i className={`bx bxl-linkedin ${logoClasses}`}></i>
 					</a>
 					<a href="https://gitlab.com/sragasa97" target="_blank" rel="noopener noreferrer" alt="Gitlab">
-						<GitlabIcon className="nav-logo" />
+						<i className={`bx bxl-gitlab ${logoClasses}`}></i>
 					</a>
 					<a
 						href="https://drive.google.com/file/d/1PjY6bqQEBeuHqvUC4zZAjB1nhtxbTqUs/view?usp=sharing"
@@ -70,7 +45,7 @@ function Nav() {
 						rel="noopener noreferrer"
 						alt="Resume"
 					>
-						<ResumeIcon className="nav-logo" />
+						<i className={`bx bx-receipt ${logoClasses}`}></i>
 					</a>
 				</div>
 			</nav>

@@ -1,40 +1,46 @@
 nav {
+	height: max-content;
+	width: 90%;
+	padding: 0.5rem 3.5rem;
 	position: fixed;
-	top: 0.5rem;
-	left: 0.5rem;
-	translate: 0 -72px;
+	inset: 3.5% 0rem 0rem 5%;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	gap: 1.5rem;
-	padding: 0 1.5rem;
-	height: 3rem;
-	width: 95%;
-	transition: 0.3s;
-	/* glassmorphism */
-	background: rgba(255, 255, 255, 0.12);
-	border-radius: 16px;
-	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-	backdrop-filter: blur(6.8px);
-	-webkit-backdrop-filter: blur(6.8px);
-}
-
-nav.visible {
-	top: 2.5%;
-	left: 2.5%;
-	translate: 0px 0px;
 }
 
 .nav-item {
-	text-decoration: none;
-	color: rgb(255 255 255 / 96%);
-	height: 4rem;
+	/* text-decoration: none; */
 	display: grid;
 	place-items: center;
+	letter-spacing: 0.15rem;
 }
 
-.nav-logo {
-	height: 1.75rem;
-	display: grid;
-	place-items: center;
+.logoHover a::before {
+	content: "";
+	position: absolute;
+	transform: translate(10px 10px);
+	/* margin: auto; */
+	height: 0;
+	width: 0;
+	background-color: #8fc0a9;
+	z-index: -1;
+	border-radius: 9999px;
+	transition: 0.5s;
+}
+
+.logoHover a:hover::before {
+	height: 2rem;
+	width: 2rem;
+	color: black;
+	border-color: black;
+}
+
+.logoHover a i {
+	transition: 0.5s;
+}
+
+.logoHover a:hover i {
+	color: black;
+	border-color: #4a7c59;
 }
