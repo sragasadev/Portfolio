@@ -10,23 +10,26 @@ nav {
 }
 
 .nav-item {
-	/* text-decoration: none; */
 	display: grid;
 	place-items: center;
 	letter-spacing: 0.15rem;
 }
 
+.logoHover a {
+	position: relative;
+}
+
 .logoHover a::before {
 	content: "";
-	position: absolute;
-	transform: translate(10px 10px);
-	/* margin: auto; */
 	height: 0;
 	width: 0;
-	background-color: #8fc0a9;
+	position: absolute;
+	inset: 0;
 	z-index: -1;
+	margin: auto;
+	background-color: #8fc0a9;
 	border-radius: 9999px;
-	transition: 0.5s;
+	transition: 0.3s;
 }
 
 .logoHover a:hover::before {
@@ -37,7 +40,7 @@ nav {
 }
 
 .logoHover a i {
-	transition: 0.5s;
+	transition: 0.3s;
 }
 
 .logoHover a:hover i {

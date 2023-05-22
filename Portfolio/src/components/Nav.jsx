@@ -12,7 +12,7 @@ function Nav() {
 		"w-8 h-8 relative text-xl text-[#8FC0A9] rounded-full inline-flex justify-center items-center bg-transparent border-2 border-[#8FC0A9] overflow-hidden";
 
 	const navHover =
-		"opacity-80 hover:opacity-100 hover:underline hover:underline-offset-8 hover:decoration-white focus:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#8FC0A9] dark:[&.active]:text-neutral-400";
+		"opacity-80 hover:opacity-100 hover:underline hover:underline-offset-8 hover:decoration-[#8FC0A9] focus:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#8FC0A9] dark:[&.active]:text-neutral-400";
 
 	return (
 		<>
@@ -22,10 +22,11 @@ function Nav() {
 				</div>
 				<div className="flex items-center justify-center gap-8 font-lexend text-xs">
 					<h2 className={`nav-item ${navHover}`}>HOME</h2>
-					<h2 className="nav-item">ABOUT ME</h2>
-					<h2 className="nav-item">EXPERIENCE</h2>
-					<h2 className="nav-item">SKILLS</h2>
-					<h2 className="nav-item">CONTACT ME</h2>
+					<h2 className={`nav-item ${navHover}`}>ABOUT ME</h2>
+					<h2 className={`nav-item ${navHover}`}>EXPERIENCE</h2>
+					<h2 className={`nav-item ${navHover}`}>SKILLS</h2>
+					<h2 className={`nav-item ${navHover}`}>RECOMMENDATIONS</h2>
+					<h2 className={`nav-item ${navHover}`}>CONTACT ME</h2>
 				</div>
 				<div className="flex items-center justify-evenly gap-2 logoHover">
 					<a
