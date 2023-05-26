@@ -1,9 +1,10 @@
 nav {
 	height: max-content;
-	width: 90%;
+	width: clamp(320px, 90%, 1800px);
 	padding: 0.5rem 3.5rem;
 	position: fixed;
-	inset: 3.5% 0rem 0rem 5%;
+	inset: 3.5% 0px 0px;
+	margin: 0px auto 0px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -19,6 +20,11 @@ nav {
 	position: relative;
 }
 
+.logoHover a i,
+.logoHover a::before {
+	transition: 0.25s;
+}
+
 .logoHover a::before {
 	content: "";
 	height: 0;
@@ -27,23 +33,17 @@ nav {
 	inset: 0;
 	z-index: -1;
 	margin: auto;
-	background-color: #8fc0a9;
+	background-color: var(--primary-accent-color);
 	border-radius: 9999px;
-	transition: 0.3s;
+}
+
+.logoHover a:hover i,
+.logoHover a:hover::before {
+	color: black;
+	border-color: var(--cta-color);
 }
 
 .logoHover a:hover::before {
 	height: 2rem;
 	width: 2rem;
-	color: black;
-	border-color: black;
-}
-
-.logoHover a i {
-	transition: 0.3s;
-}
-
-.logoHover a:hover i {
-	color: black;
-	border-color: #4a7c59;
 }

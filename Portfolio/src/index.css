@@ -4,6 +4,20 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+	--main-bg-color: #faf3dd;
+	--cta-color: #4a7c59;
+	--primary-accent-color: #8fc0a9;
+	--secondary-accent-color: #c8d5b9;
+	--tertiary-accent-color: #68b0ab;
+}
+
 html {
 	font-size: calc(15px + 0.390625vw); /*Responsive Font Size For Every Screen */
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-items: center;
 }

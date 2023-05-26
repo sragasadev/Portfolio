@@ -12,15 +12,15 @@ function Nav() {
 		"w-8 h-8 relative text-xl text-[#8FC0A9] rounded-full inline-flex justify-center items-center bg-transparent border-2 border-[#8FC0A9] overflow-hidden";
 
 	const navHover =
-		"opacity-80 hover:opacity-100 hover:underline hover:underline-offset-8 hover:decoration-[#8FC0A9] focus:opacity-100 [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[#8FC0A9] dark:[&.active]:text-neutral-400";
+		"hover:underline hover:underline-offset-8 hover:decoration-[3px] hover:decoration-[#8FC0A9] [&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[3px] [&.active]:decoration-[#4A7C59] [&.active]:text-[#8FC0A9]";
 
 	return (
 		<>
-			<nav className={scrollPosition > 0 ? glassmorphism : ""}>
+			<nav className={scrollPosition > 0 ? `${glassmorphism}` : ""}>
 				<div>
 					<img className="h-10 w-auto rounded-lg" src={PortfolioIcon} alt="Portfolio Icon" />
 				</div>
-				<div className="flex items-center justify-center gap-8 font-lexend text-xs">
+				<div className="mx-12 flex items-center justify-center gap-8 font-lexend text-[0.65rem]">
 					<h2 className={`nav-item ${navHover}`}>HOME</h2>
 					<h2 className={`nav-item ${navHover}`}>ABOUT ME</h2>
 					<h2 className={`nav-item ${navHover}`}>EXPERIENCE</h2>

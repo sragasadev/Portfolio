@@ -1,4 +1,4 @@
--   Scrapbook theme
+-   Scrapbook theme or plant theme
 -   Parallax
 -   Scrolling animations
     -   Load each section as I scroll down
@@ -13,3 +13,7 @@ CSS Units:
 
 -   Don't use rem for container elements (zooming in and out affects these values)
 -   Use clamp to adjust min and max for responsiveness
+
+> > Stretch Goals:
+
+-   Dark mode
