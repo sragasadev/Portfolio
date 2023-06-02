@@ -12,12 +12,18 @@
 	--tertiary-accent-color: #68b0ab;
 }
 
-html {
+html,
+body,
+#root {
+	width: 100%;
+	max-width: 100svw;
 	font-size: calc(15px + 0.390625vw); /*Responsive Font Size For Every Screen */
 }
 
-body {
+body,
+#root {
 	display: flex;
+	flex-direction: column;
 	align-items: center;
-	justify-items: center;
+	overflow-x: hidden;
 }

@@ -21,12 +21,24 @@ function Nav() {
 					<img className="h-10 w-auto rounded-lg" src={PortfolioIcon} alt="Portfolio Icon" />
 				</div>
 				<div className="mx-12 flex items-center justify-center gap-8 font-lexend text-[0.65rem]">
-					<h2 className={`nav-item ${navHover}`}>HOME</h2>
-					<h2 className={`nav-item ${navHover}`}>ABOUT ME</h2>
-					<h2 className={`nav-item ${navHover}`}>EXPERIENCE</h2>
-					<h2 className={`nav-item ${navHover}`}>SKILLS</h2>
-					<h2 className={`nav-item ${navHover}`}>RECOMMENDATIONS</h2>
-					<h2 className={`nav-item ${navHover}`}>CONTACT ME</h2>
+					<a href="#" className={`nav-item ${navHover}`}>
+						HOME
+					</a>
+					<a href="#" className={`nav-item ${navHover}`}>
+						ABOUT ME
+					</a>
+					<a href="#" className={`nav-item ${navHover}`}>
+						EXPERIENCE
+					</a>
+					<a href="#" className={`nav-item ${navHover}`}>
+						SKILLS
+					</a>
+					<a href="#" className={`nav-item ${navHover}`}>
+						RECOMMENDATIONS
+					</a>
+					<a href="#" className={`nav-item ${navHover}`}>
+						CONTACT ME
+					</a>
 				</div>
 				<div className="flex items-center justify-evenly gap-2 logoHover">
 					<a
