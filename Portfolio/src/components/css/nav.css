@@ -3,6 +3,7 @@ nav {
 	width: clamp(320px, 90%, 1800px);
 	padding: 0.5rem 3.5rem;
 	position: fixed;
+	z-index: 10;
 	inset: 3.5% 0px 0px;
 	margin: 0px auto 0px;
 	display: flex;
@@ -46,4 +47,8 @@ nav {
 .logoHover a:hover::before {
 	height: 2rem;
 	width: 2rem;
+}
+
+.navHover {
+	transition: 0.25s;
 }

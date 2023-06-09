@@ -1,18 +1,18 @@
 import "../App.css";
+import "./css/hero.css";
 
 function Hero() {
-	return <h1 className="text-3xl bg-[#FAF3DD] pt-48 w-full text-center">DEVELOPMENT IN PROGRESS</h1>;
+	return (
+		<section id="hero" className="bg-[#FAF3DD] font-lexend border-2 border-red-400 pt-36 pl-36">
+			<h2 className="portfolioComponent  tracking-wider text-md">
+				Hey there <span className="wave">👋</span> My name is Shaun!
+			</h2>
+			<div id="typewriter" className="portfolioComponent ">
+				<h1 className="static-text text-3xl">I'm a </h1>
+				<h1 className="dynamic-text text-3xl">software engineer.</h1>
+			</div>
+		</section>
+	);
 }
 
 export default Hero;
-
-{
-	/* <section id="hero" className="h-[85svh] w-full border-2 border-red-400 ">
-	<h2 className="mt-[15svh]">Hey! My name is Shaun Ragasa.</h2>
-	<h1 className="">I'm a _____.</h1>
-	<h2 className="">*Description*</h2>
-	<button>
-		<a href="https://drive.google.com/file/d/1PjY6bqQEBeuHqvUC4zZAjB1nhtxbTqUs/view?usp=sharing">Hire Me!</a>
-	</button>
-</section>; */
-}

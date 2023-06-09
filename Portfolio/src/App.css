@@ -1,0 +1,8 @@
+section {
+	height: max-content;
+	width: 100%;
+}
+
+.portfolioComponent {
+	width: clamp(320px, 90%, 1800px);
+}

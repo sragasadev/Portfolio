@@ -1,0 +1,52 @@
+.wave {
+	animation-name: wave-animation; /* Refers to the name of the @keyframes element below */
+	animation-duration: 2.5s; /* Animation speed */
+	animation-iteration-count: infinite;
+	transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+	display: inline-block;
+}
+
+@keyframes wave-animation {
+	0% {
+		transform: rotate(0deg);
+	}
+	10% {
+		transform: rotate(14deg);
+	}
+	20% {
+		transform: rotate(-8deg);
+	}
+	30% {
+		transform: rotate(14deg);
+	}
+	40% {
+		transform: rotate(-4deg);
+	}
+	50% {
+		transform: rotate(10deg);
+	}
+	60% {
+		transform: rotate(0deg);
+	} /* Reset for the last half to pause */
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
+#typewriter > h1 {
+	position: relative;
+}
+
+.dynamic-text {
+	color: var(--tertiary-accent-color);
+}
+
+.dynamic-text::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: var(--main-bg-color);
+}
