@@ -5,4 +5,5 @@ section {
 
 .portfolioComponent {
 	width: clamp(320px, 90%, 1800px);
+	margin: 0 auto;
 }
