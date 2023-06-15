@@ -1,3 +1,4 @@
+import { useState } from "react";
 import useScrollPosition from "./hooks/useScrollPosition";
 import PortfolioIcon from "../assets/portfolio_icon.png";
 import "../components/css/nav.css";
@@ -20,7 +21,7 @@ function Nav() {
 				<div>
 					<img className="h-10 w-auto rounded-lg" src={PortfolioIcon} alt="Portfolio Icon" />
 				</div>
-				<div className="mx-12 flex items-center justify-center gap-8 font-lexend text-[0.65rem]">
+				<div className="mx-12 flex items-center justify-center gap-8 font-lexend text-[0.65rem] text-center">
 					<a href="#" className={`nav-item ${navHover}`}>
 						HOME
 					</a>

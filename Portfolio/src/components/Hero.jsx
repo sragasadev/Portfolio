@@ -1,15 +1,29 @@
 import "../App.css";
 import "./css/hero.css";
+import heroPic from "../assets/hero_picture.png";
 
 function Hero() {
 	return (
-		<section id="hero" className="pt-60 bg-[#FAF3DD] font-lexend border-2 border-red-400">
-			<h2 className="portfolioComponent tracking-wider text-md">
-				Hey there <span className="wave">👋</span> My name is Shaun!
-			</h2>
-			<div id="typewriter" className="portfolioComponent ">
-				<h1 className="static-text text-3xl">I'm a </h1>
-				<h1 className="dynamic-text text-3xl">software engineer.</h1>
+		<section id="hero" className="pt-36 pb-8 px-20 bg-[#FAF3DD] font-lexend border-2 border-red-400">
+			<div className="portfolioComponent grid grid-cols-1 lg:grid-cols-2">
+				<div className="flex flex-col py-4 items-center lg:items-start">
+					<h2 className="tracking-wider text-md">
+						Hey there <span className="wave">👋</span> My name is Shaun!
+					</h2>
+					<div id="typewriter" className="mt-2">
+						<h1 className="static-text text-4xl">I'm a </h1>
+						<h1 className="dynamic-text text-4xl">software engineer.</h1>
+					</div>
+					<p className="mt-auto tracking-wide text-md text-justify">
+						I am a full-stack software engineer with a drive for life-long learning and improving my skill
+						set. I have experience developing several full-stack applications in an Agile environment.
+					</p>
+				</div>
+				<img
+					className="h-72 w-auto mx-auto mt-6 lg:mt-0 lg:ml-auto 2xl:mx-auto"
+					src={heroPic}
+					alt="Shaun Ragasa Hero Picture"
+				/>
 			</div>
 		</section>
 	);
