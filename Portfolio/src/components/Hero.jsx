@@ -4,7 +4,7 @@ import heroPic from "../assets/hero_picture.png";
 
 function Hero() {
 	return (
-		<section id="hero" className="pt-36 pb-8 px-20 bg-[#FAF3DD] font-lexend border-2 border-red-400">
+		<section id="hero" className="pt-28 pb-8 px-20 bg-[#FAF3DD] font-lexend border-2 border-red-400">
 			<div className="portfolioComponent grid grid-cols-1 lg:grid-cols-2">
 				<div className="flex flex-col py-4 items-center lg:items-start">
 					<h2 className="tracking-wider text-md">
@@ -20,7 +20,7 @@ function Hero() {
 					</p>
 				</div>
 				<img
-					className="h-72 w-auto mx-auto mt-6 lg:mt-0 lg:ml-auto 2xl:mx-auto"
+					className="h-72 w-auto pt-6 place-self-center lg:place-self-end 2xl:place-self-center 2xl:pl-20"
 					src={heroPic}
 					alt="Shaun Ragasa Hero Picture"
 				/>

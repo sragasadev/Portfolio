@@ -1,20 +1,42 @@
 nav {
 	height: max-content;
-	width: clamp(320px, 90%, 1800px);
-	padding: 0.5rem 3.5rem;
+	width: clamp(320px, 80%, 1536px);
+	padding: 0.5rem 1rem;
 	position: fixed;
 	z-index: 10;
-	inset: 3.5% 0px 0px;
+	inset: 1.8rem 0px 0px;
 	margin: 0px auto 0px;
 	display: flex;
+	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
 }
 
 .nav-item {
+	position: relative;
 	display: grid;
 	place-items: center;
 	letter-spacing: 0.15rem;
+	transition: 0.25s;
+}
+.nav-item:hover {
+	color: var(--primary-accent-color);
+	text-shadow: 1px 1px 0px black;
+}
+
+.nav-item:after {
+	content: "";
+	position: absolute;
+	background-color: var(--primary-accent-color);
+	height: 2px;
+	width: 0;
+	left: 0;
+	bottom: -0.28rem;
+	transition: 0.25s;
+}
+
+.nav-item:hover:after {
+	width: 100%;
 }
 
 .logoHover a {
@@ -36,17 +58,19 @@ nav {
 	margin: auto;
 	background-color: var(--primary-accent-color);
 	border-radius: 9999px;
+	transform: translateY(-2px);
 }
 
 .logoHover a:hover i,
 .logoHover a:hover::before {
 	color: black;
-	border-color: var(--cta-color);
+	border-color: black;
 }
 
 .logoHover a:hover::before {
 	height: 2rem;
 	width: 2rem;
+
 }
 
 .navHover {
