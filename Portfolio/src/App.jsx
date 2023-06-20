@@ -17,7 +17,6 @@ function App() {
 			<Skills />
 			<Recommendations />
 			<ContactMe />
-			<div className="h-screen w-full bg-[#FAF3DD]"></div>
 		</>
 	);
 }

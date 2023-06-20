@@ -1,15 +1,16 @@
 function AboutMe() {
 	return (
-		<section id="aboutme">
-			<h1>About Me</h1>
-			<img src="" alt="" />
-			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A rem ex dolores impedit animi necessitatibus accusamus fuga, quibusdam culpa veniam id debitis! Dignissimos pariatur suscipit velit, in ab nostrum unde.</p>
-			<button>Gitlab</button>
-			<button>Resume</button>
-			<div>
-				<h2>Currently Playing While I Code:</h2>
-				<button></button>
-			</div>
+		<section
+			id="aboutme"
+			className="text-center h-[80vh] w-full bg-[#FAF3DD] flex flex-col justify-center border-2 border-[#8FC0A9]"
+		>
+			<h1>ABOUT ME</h1>
+			<h1>🚧 CURRENTLY IN DEVELOPMENT 🚧</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cum quas dolore, eos harum quibusdam
+				reprehenderit eaque ducimus, sit error tenetur cupiditate veritatis illo illum accusantium beatae eum
+				rem fugit.
+			</p>
 		</section>
 	);
 }

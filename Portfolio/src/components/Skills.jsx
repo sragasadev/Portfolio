@@ -1,22 +1,16 @@
 function Skills() {
 	return (
-		<section id="skills">
-			<h1>Skills</h1>
-			<div>
-				<h2>Languages</h2>
-			</div>
-			<div>
-				<h2>Frontend</h2>
-			</div>
-			<div>
-				<h2>Backend</h2>
-			</div>
-			<div>
-				<h2>Developer Tools</h2>
-			</div>
-			<div>
-				<h2>Soft Skills</h2>
-			</div>
+		<section
+			id="skills"
+			className="text-center h-[80vh] w-full bg-[#FAF3DD] flex flex-col justify-center border-2 border-[#8FC0A9]"
+		>
+			<h1>SKILLS</h1>
+			<h1>🚧 CURRENTLY IN DEVELOPMENT 🚧</h1>
+			<p>
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cum quas dolore, eos harum quibusdam
+				reprehenderit eaque ducimus, sit error tenetur cupiditate veritatis illo illum accusantium beatae eum
+				rem fugit.
+			</p>
 		</section>
 	);
 }
