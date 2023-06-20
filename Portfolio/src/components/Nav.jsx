@@ -1,73 +1,188 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import useScrollPosition from "./hooks/useScrollPosition";
 import PortfolioIcon from "../assets/portfolio_icon.png";
 import "../components/css/nav.css";
+import "../components/css/hamburgers.css";
 
 function Nav() {
+	const [menuOpen, setMenuOpen] = useState(false);
+	const navbar = useRef(null);
+	const hamburgerMenu = useRef(null);
 	const scrollPosition = useScrollPosition();
 
 	const glassmorphism = "rounded-2xl bg-[rgba(255,255,255,0.2)] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-md";
 
-	const logoClasses =
+	// expanded classes
+	const expandedIcons =
 		"w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-[#8FC0A9] overflow-hidden text-xl text-[#8FC0A9]";
 
 	const navHover =
 		"[&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[3px] [&.active]:decoration-[#4A7C59] [&.active]:text-[#8FC0A9]";
 
+	// hamburger classes
+	const hamburgerIcons =
+		"w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-black overflow-hidden text-xl text-black hover:border-[#faf3dd] hover:text-[#faf3dd]";
+
+	const hamburgerItems =
+		"py-2 border-t-2 border-[#faf3dd] hover:bg-[#faf3dd] hover:underline hover:underline-offset-[6px] hover:decoration-2 hover:tracking-widest";
+
+	const closeMenu = () => {
+		setMenuOpen(false);
+	};
+
+	const handleMenuClick = () => {
+		setMenuOpen(!menuOpen);
+	};
+
+	const handleLargeWindow = () => {
+		const windowSize = window.innerWidth;
+		if (windowSize >= 1024) {
+			setMenuOpen(false);
+		}
+	};
+
+	useEffect(() => {
+		const handleOutsideClick = (e) => {
+			if (
+				navbar.current &&
+				hamburgerMenu.current &&
+				menuOpen &&
+				!navbar.current.contains(e.target) &&
+				!hamburgerMenu.current.contains(e.target)
+			) {
+				setMenuOpen(false);
+			}
+		};
+
+		window.addEventListener("mousedown", handleOutsideClick);
+
+		return () => {
+			window.removeEventListener("mousedown", handleOutsideClick);
+		};
+	}, [menuOpen]);
+
+	useEffect(() => {
+		window.addEventListener("resize", handleLargeWindow);
+
+		return () => {
+			window.removeEventListener("resize", handleLargeWindow);
+		};
+	}, []);
+
 	return (
 		<>
-			<nav className={scrollPosition > 0 ? `${glassmorphism}` : ""}>
+			<nav className={scrollPosition > 0 ? `${glassmorphism}` : ""} ref={navbar}>
 				<div>
-					<img className="h-8 w-auto rounded-lg" src={PortfolioIcon} alt="Portfolio Icon" title="Portfolio Icon" />
+					<a href="#hero" onClick={closeMenu}>
+						<img
+							className="h-8 w-auto rounded-lg"
+							src={PortfolioIcon}
+							alt="Portfolio Icon"
+							title="Portfolio Icon"
+						/>
+					</a>
 				</div>
-				<div className="order-3 lg:hidden">
+				<div className="lg:hidden flex">
 					<button
-						data-collapse-toggle="navbar"
+						className={`hamburger hamburger--spin ${menuOpen ? "is-active" : ""}`}
 						type="button"
-						className="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-						aria-controls="navbar"
-						aria-expanded="false"
+						onClick={handleMenuClick}
 					>
-						<span className="sr-only">Open main menu</span>
-						<svg
-							className="w-8 h-8"
-							aria-hidden="true"
-							fill="currentColor"
-							viewBox="0 0 20 20"
-							xmlns="http://www.w3.org/2000/svg"
-						>
-							<path
-								fillRule="evenodd"
-								d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-								clipRule="evenodd"
-							></path>
-						</svg>
+						<span className="hamburger-box">
+							<span className="hamburger-inner"></span>
+						</span>
 					</button>
 				</div>
-				<div
-					className="hidden lg:flex justify-center gap-5 xl:gap-6 font-lexend text-[0.425rem] xl:text-[0.525rem] 2xl:text-[0.65rem] text-center"
-					id="navbar"
-				>
-					<a href="#" className={`nav-item ${navHover}`}>
+				<div id="hamburgerMenu" className={`font-lexend ${menuOpen ? "" : "hidden"}`} ref={hamburgerMenu}>
+					<ul className={`border-2 border-black bg-[#8fc0a9] rounded-xl text-center`}>
+						<li className="py-5 grid grid-cols-3 place-items-center">
+							<p className="">WEB DEVELOPER</p>
+							<h1>
+								<b>SHAUN RAGASA</b>
+							</h1>
+							<div className="items-center justify-evenly space-x-3">
+								<a
+									href="https://www.linkedin.com/in/shaunragasa/"
+									target="_blank"
+									rel="noopener noreferrer"
+									alt="LinkedIn"
+									title="LinkedIn"
+								>
+									<i className={`bx bxl-linkedin ${hamburgerIcons}`}></i>
+								</a>
+								<a
+									href="https://gitlab.com/sragasa97"
+									target="_blank"
+									rel="noopener noreferrer"
+									alt="Gitlab"
+									title="Gitlab"
+								>
+									<i className={`bx bxl-gitlab ${hamburgerIcons}`}></i>
+								</a>
+								<a
+									href="https://drive.google.com/file/d/1PjY6bqQEBeuHqvUC4zZAjB1nhtxbTqUs/view?usp=sharing"
+									target="_blank"
+									rel="noopener noreferrer"
+									alt="Resume"
+									title="Resume"
+								>
+									<i className={`bx bx-receipt ${hamburgerIcons}`}></i>
+								</a>
+							</div>
+						</li>
+						<li className={hamburgerItems}>
+							<a href="#hero" onClick={closeMenu}>
+								HOME
+							</a>
+						</li>
+						<li className={hamburgerItems}>
+							<a href="#aboutme" onClick={closeMenu}>
+								ABOUT ME
+							</a>
+						</li>
+						<li className={hamburgerItems}>
+							<a href="#experience" onClick={closeMenu}>
+								EXPERIENCE
+							</a>
+						</li>
+						<li className={hamburgerItems}>
+							<a href="#skills" onClick={closeMenu}>
+								SKILLS
+							</a>
+						</li>
+						<li className={hamburgerItems}>
+							<a href="#recommendations" onClick={closeMenu}>
+								RECOMMENDATIONS
+							</a>
+						</li>
+						<li className={`${hamburgerItems} rounded-b-xl`}>
+							<a href="#contactme" onClick={closeMenu}>
+								CONTACT ME
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div className="hidden lg:flex justify-center gap-4 xl:gap-6 font-lexend text-[0.475rem] xl:text-[0.525rem] 2xl:text-[0.65rem] text-center">
+					<a href="#hero" className={`nav-item ${navHover}`}>
 						HOME
 					</a>
-					<a href="#" className={`nav-item ${navHover}`}>
+					<a href="#aboutme" className={`nav-item ${navHover}`}>
 						ABOUT ME
 					</a>
-					<a href="#" className={`nav-item ${navHover}`}>
+					<a href="#experience" className={`nav-item ${navHover}`}>
 						EXPERIENCE
 					</a>
-					<a href="#" className={`nav-item ${navHover}`}>
+					<a href="#skills" className={`nav-item ${navHover}`}>
 						SKILLS
 					</a>
-					<a href="#" className={`nav-item ${navHover}`}>
+					<a href="#recommendations" className={`nav-item ${navHover}`}>
 						RECOMMENDATIONS
 					</a>
-					<a href="#" className={`nav-item ${navHover}`}>
+					<a href="#contactme" className={`nav-item ${navHover}`}>
 						CONTACT ME
 					</a>
 				</div>
-				<div className="order-2 ml-auto lg:ml-0 items-center justify-evenly space-x-2 logoHover">
+				<div className="hidden lg:flex items-center justify-evenly space-x-2 logoHover">
 					<a
 						href="https://www.linkedin.com/in/shaunragasa/"
 						target="_blank"
@@ -75,10 +190,16 @@ function Nav() {
 						alt="LinkedIn"
 						title="LinkedIn"
 					>
-						<i className={`bx bxl-linkedin ${logoClasses}`}></i>
+						<i className={`bx bxl-linkedin ${expandedIcons}`}></i>
 					</a>
-					<a href="https://gitlab.com/sragasa97" target="_blank" rel="noopener noreferrer" alt="Gitlab" title="Gitlab">
-						<i className={`bx bxl-gitlab ${logoClasses}`}></i>
+					<a
+						href="https://gitlab.com/sragasa97"
+						target="_blank"
+						rel="noopener noreferrer"
+						alt="Gitlab"
+						title="Gitlab"
+					>
+						<i className={`bx bxl-gitlab ${expandedIcons}`}></i>
 					</a>
 					<a
 						href="https://drive.google.com/file/d/1PjY6bqQEBeuHqvUC4zZAjB1nhtxbTqUs/view?usp=sharing"
@@ -87,10 +208,11 @@ function Nav() {
 						alt="Resume"
 						title="Resume"
 					>
-						<i className={`bx bx-receipt ${logoClasses}`}></i>
+						<i className={`bx bx-receipt ${expandedIcons}`}></i>
 					</a>
 				</div>
 			</nav>
+			<div className={`${menuOpen ? "fixed h-screen w-screen top-0 left-0 z-10 backdrop-blur-md" : ""}`}></div>
 		</>
 	);
 }

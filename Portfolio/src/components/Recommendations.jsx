@@ -1,6 +1,6 @@
 function Recommendations() {
 	return (
-		<section>
+		<section id="recommendations">
 			<h1>Recommendations</h1>
 			<div>
 				{/* Recs Container */}

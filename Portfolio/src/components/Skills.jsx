@@ -1,6 +1,6 @@
 function Skills() {
 	return (
-		<section>
+		<section id="skills">
 			<h1>Skills</h1>
 			<div>
 				<h2>Languages</h2>

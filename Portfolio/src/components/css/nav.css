@@ -3,7 +3,7 @@ nav {
 	width: clamp(320px, 80%, 1536px);
 	padding: 0.5rem 1rem;
 	position: fixed;
-	z-index: 10;
+	z-index: 20;
 	inset: 1.8rem 0px 0px;
 	margin: 0px auto 0px;
 	display: flex;
@@ -58,7 +58,7 @@ nav {
 	margin: auto;
 	background-color: var(--primary-accent-color);
 	border-radius: 9999px;
-	transform: translateY(-2px);
+	/* transform: translateY(-1px); */
 }
 
 .logoHover a:hover i,
@@ -75,4 +75,13 @@ nav {
 
 .navHover {
 	transition: 0.25s;
+}
+
+#hamburgerMenu {
+	position: absolute;
+	width: 100%;
+	padding: 0.5rem 0;
+	z-index: 10;
+	inset: 3.5rem 0px 0px;
+	margin: 0px auto 0px;
 }
