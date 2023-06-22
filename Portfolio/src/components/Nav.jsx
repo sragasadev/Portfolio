@@ -96,11 +96,29 @@ function Nav() {
 				<div id="hamburgerMenu" className={`font-lexend ${menuOpen ? "" : "hidden"}`} ref={hamburgerMenu}>
 					<ul className={`border-2 border-black bg-[#8fc0a9] rounded-xl text-center`}>
 						<li className="py-5 grid grid-cols-3 place-items-center">
-							<p className="">WEB DEVELOPER</p>
-							<h1>
+							<div className="">
+								<h3 className="text-xs sm:text-sm text-left">I'm a</h3>
+								<h1>
+									<div
+										id="rotating"
+										className="h-[15px] leading-[15px] text-[10px] sm:h-[21px] sm:leading-[21px] sm:text-[16px] md:h-[25px] md:leading-[25px] md:text-[20px]"
+									>
+										<span className="animate-rotatingXS sm:animate-rotatingSM md:animate-rotatingMD">
+											Full-Stack Developer
+											<br />
+											Software Engineer
+											<br />
+											Front-End Developer
+											<br />
+											Back-End Developer
+										</span>
+									</div>
+								</h1>
+							</div>
+							<h1 className="">
 								<b>SHAUN RAGASA</b>
 							</h1>
-							<div className="items-center justify-evenly space-x-3">
+							<div className="items-center justify-evenly sm:space-x-3">
 								<a
 									href="https://www.linkedin.com/in/shaunragasa/"
 									target="_blank"
