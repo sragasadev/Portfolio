@@ -58,7 +58,6 @@ nav {
 	margin: auto;
 	background-color: var(--primary-accent-color);
 	border-radius: 9999px;
-	/* transform: translateY(-1px); */
 }
 
 .logoHover a:hover i,
@@ -84,4 +83,12 @@ nav {
 	z-index: 10;
 	inset: 3.5rem 0px 0px;
 	margin: 0px auto 0px;
+}
+
+#rotating {
+	overflow: hidden;
+}
+
+#rotating span {
+	position: relative;
 }
