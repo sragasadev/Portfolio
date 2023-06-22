@@ -4,7 +4,7 @@ import heroPic from "../assets/hero_picture.png";
 
 function Hero() {
 	return (
-		<section id="hero" className="pt-28 pb-8 px-20 bg-[#FAF3DD] font-lexend border-2 border-red-400">
+		<section id="hero" className="pt-28 pb-8 sm:px-20 bg-[#FAF3DD] font-lexend border-2 border-red-400">
 			<div className="portfolioComponent grid grid-cols-1 lg:grid-cols-2">
 				<div className="flex flex-col py-4 items-center lg:items-start">
 					<h2 className="tracking-wider text-md">
