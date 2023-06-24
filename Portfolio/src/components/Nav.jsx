@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import useScrollPosition from "./hooks/useScrollPosition";
+import useActiveLink from "./hooks/useActiveLink";
 import PortfolioIcon from "../assets/portfolio_icon.png";
 import "../components/css/nav.css";
 import "../components/css/hamburgers.css";
@@ -16,8 +17,8 @@ function Nav() {
 	const expandedIcons =
 		"w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-[#8FC0A9] overflow-hidden text-xl text-[#8FC0A9]";
 
-	const navHover =
-		"[&.active]:underline [&.active]:underline-offset-8 [&.active]:decoration-[3px] [&.active]:decoration-[#4A7C59] [&.active]:text-[#8FC0A9]";
+	const navActive =
+		"[&.active]:text-[#4A7C59]";
 
 	// hamburger classes
 	const hamburgerIcons =
@@ -40,6 +41,8 @@ function Nav() {
 			setMenuOpen(false);
 		}
 	};
+
+	useActiveLink();
 
 	useEffect(() => {
 		const handleOutsideClick = (e) => {
@@ -97,7 +100,7 @@ function Nav() {
 					<ul className={`border-2 border-black bg-[#8fc0a9] rounded-xl text-center`}>
 						<li className="py-5 grid grid-cols-3 place-items-center">
 							<div className="">
-								<h3 className="text-xs sm:text-sm text-left">I'm a</h3>
+								<h3 className="text-xs sm:text-sm text-left">{`I'm a`}</h3>
 								<h1>
 									<div
 										id="rotating"
@@ -180,23 +183,23 @@ function Nav() {
 						</li>
 					</ul>
 				</div>
-				<div className="hidden lg:flex justify-center gap-4 xl:gap-6 font-lexend text-[0.475rem] xl:text-[0.525rem] 2xl:text-[0.65rem] text-center">
-					<a href="#hero" className={`nav-item ${navHover}`}>
+				<div id="expandedNav" className="hidden lg:flex justify-center gap-4 xl:gap-6 font-lexend text-[0.475rem] xl:text-[0.525rem] 2xl:text-[0.65rem] text-center">
+					<a href="#hero" className={`nav-item ${navActive}`}>
 						HOME
 					</a>
-					<a href="#aboutme" className={`nav-item ${navHover}`}>
+					<a href="#aboutme" className={`nav-item ${navActive}`}>
 						ABOUT ME
 					</a>
-					<a href="#experience" className={`nav-item ${navHover}`}>
+					<a href="#experience" className={`nav-item ${navActive}`}>
 						EXPERIENCE
 					</a>
-					<a href="#skills" className={`nav-item ${navHover}`}>
+					<a href="#skills" className={`nav-item ${navActive}`}>
 						SKILLS
 					</a>
-					<a href="#recommendations" className={`nav-item ${navHover}`}>
+					<a href="#recommendations" className={`nav-item ${navActive}`}>
 						RECOMMENDATIONS
 					</a>
-					<a href="#contactme" className={`nav-item ${navHover}`}>
+					<a href="#contactme" className={`nav-item ${navActive}`}>
 						CONTACT ME
 					</a>
 				</div>

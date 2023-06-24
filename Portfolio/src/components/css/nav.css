@@ -19,12 +19,13 @@ nav {
 	letter-spacing: 0.15rem;
 	transition: 0.25s;
 }
-.nav-item:hover {
+
+.nav-item:hover:not(.active) {
 	color: var(--primary-accent-color);
 	text-shadow: 1px 1px 0px black;
 }
 
-.nav-item:after {
+.nav-item::after {
 	content: "";
 	position: absolute;
 	background-color: var(--primary-accent-color);
@@ -35,7 +36,8 @@ nav {
 	transition: 0.25s;
 }
 
-.nav-item:hover:after {
+.nav-item:hover:not(.active)::after,
+.nav-item.active::after {
 	width: 100%;
 }
 
@@ -69,7 +71,6 @@ nav {
 .logoHover a:hover::before {
 	height: 2rem;
 	width: 2rem;
-
 }
 
 .navHover {

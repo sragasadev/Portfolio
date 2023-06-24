@@ -4,13 +4,13 @@ import heroPic from "../assets/hero_picture.png";
 
 function Hero() {
 	return (
-		<section id="hero" className="pt-28 pb-8 sm:px-20 bg-[#FAF3DD] font-lexend border-2 border-red-400">
+		<section id="hero" className="pt-28 pb-8 sm:px-20 bg-[#FAF3DD] font-lexend border-b-2 border-red-400">
 			<div className="portfolioComponent grid grid-cols-1 lg:grid-cols-2">
 				<div className="flex flex-col py-4 items-center lg:items-start">
 					<h2 className="tracking-wider text-md">
 						Hey there <span className="wave">👋</span> My name is Shaun!
 					</h2>
-					<div id="typewriter" className="mt-2">
+					<div id="typewriter" className="mt-2 py-1 overflow-hidden">
 						<h1 className="static-text text-4xl">I'm a </h1>
 						<h1 className="dynamic-text text-4xl">software engineer.</h1>
 					</div>
