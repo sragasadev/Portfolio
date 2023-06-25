@@ -8,7 +8,7 @@ const useActiveLink = () => {
 
 		sections.forEach((current) => {
 			const sectionHeight = current.offsetHeight;
-			const sectionTop = current.offsetTop - 50;
+			const sectionTop = current.offsetTop - 1;
 			const sectionID = current.getAttribute("id");
 
 			if (ycoord > sectionTop && scrollY <= sectionTop + sectionHeight) {

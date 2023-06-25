@@ -33,7 +33,8 @@
 	}
 }
 
-#typewriter > h1 {
+#typewriter > h1,
+#typewriter > span {
 	position: relative;
 }
 
@@ -50,12 +51,12 @@
 	width: 100%;
 	background-color: var(--main-bg-color);
 	border-left: 2px solid black;
-	animation: typewriting 5s steps(19) infinite;
+	animation: typewriting 4s steps(20) infinite;
 }
 
 @keyframes typewriting {
 	40%, 60% {
-		left: 100%;
+		left: calc(100% + 4px);
 	}
 	100% {
 		left: 0%;

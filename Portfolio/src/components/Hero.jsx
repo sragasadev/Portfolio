@@ -3,6 +3,29 @@ import "./css/hero.css";
 import heroPic from "../assets/hero_picture.png";
 
 function Hero() {
+	const typewritingScript = () => {
+		const text = document.querySelector(".dynamic-text");
+
+		const textLoad = () => {
+			setTimeout(() => {
+				text.textContent = "software engineer.";
+			}, 0);
+			setTimeout(() => {
+				text.textContent = "front-end developer.";
+			}, 4000);
+			setTimeout(() => {
+				text.textContent = "back-end developer.";
+			}, 8000);
+			setTimeout(() => {
+				text.textContent = "full-stack developer.";
+			}, 12000);
+
+		}
+
+		textLoad();
+		setInterval(textLoad, 16000);
+	};
+
 	return (
 		<section id="hero" className="pt-28 pb-8 sm:px-20 bg-[#FAF3DD] font-lexend border-b-2 border-red-400">
 			<div className="portfolioComponent grid grid-cols-1 lg:grid-cols-2">
@@ -12,7 +35,8 @@ function Hero() {
 					</h2>
 					<div id="typewriter" className="mt-2 py-1 overflow-hidden">
 						<h1 className="static-text text-4xl">I'm a </h1>
-						<h1 className="dynamic-text text-4xl">software engineer.</h1>
+						<span className="dynamic-text text-3xl"></span>
+						<script>{typewritingScript}</script>
 					</div>
 					<p className="mt-auto tracking-wide text-md text-justify [text-align-last:center] lg:[text-align-last:justify]">
 						I am a full-stack software engineer with a drive for life-long learning and improving my skill
