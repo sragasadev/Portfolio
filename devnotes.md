@@ -17,3 +17,5 @@ CSS Units:
 > > Stretch Goals:
 
 -   Dark mode
+
+Spotify player idea: - Use embedded spotify player - Craft personal playlist ("my now playing while I code")
