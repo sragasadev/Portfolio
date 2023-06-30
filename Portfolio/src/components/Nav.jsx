@@ -17,8 +17,7 @@ function Nav() {
 	const expandedIcons =
 		"w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-[#8FC0A9] overflow-hidden text-xl text-[#8FC0A9]";
 
-	const navActive =
-		"[&.active]:text-[#4A7C59]";
+	const navActive = "[&.active]:text-[#4A7C59]";
 
 	// hamburger classes
 	const hamburgerIcons =
@@ -98,30 +97,25 @@ function Nav() {
 				</div>
 				<div id="hamburgerMenu" className={`font-lexend ${menuOpen ? "" : "hidden"}`} ref={hamburgerMenu}>
 					<ul className={`border-2 border-black bg-[#8fc0a9] rounded-xl text-center`}>
-						<li className="py-5 grid grid-cols-3 place-items-center">
-							<div className="">
-								<h3 className="text-xs sm:text-sm text-left">{`I'm a`}</h3>
-								<h1>
-									<div
-										id="rotating"
-										className="h-[15px] leading-[15px] text-[10px] sm:h-[21px] sm:leading-[21px] sm:text-[16px] md:h-[25px] md:leading-[25px] md:text-[20px]"
-									>
-										<span className="animate-rotatingXS sm:animate-rotatingSM md:animate-rotatingMD">
-											Full-Stack Developer
-											<br />
-											Software Engineer
-											<br />
-											Front-End Developer
-											<br />
-											Back-End Developer
-										</span>
-									</div>
-								</h1>
+						<li className="py-5 grid grid-cols-5 place-items-center">
+							<div className="col-span-3 flex">
+								<div
+									id="rotating"
+									className="h-[15px] leading-[15px] text-[11px] sm:h-[21px] sm:leading-[21px] sm:text-[16px] md:h-[25px] md:leading-[25px] md:text-[20px] tracking-widest"
+								>
+									<span className="animate-rotatingXS sm:animate-rotatingSM md:animate-rotatingMD">
+										{`Hi I'm Shaun Ragasa!`}
+										<br />
+										A Full-Stack Developer,
+										<br />
+										a Front-End Developer,
+										<br />& a Back-End Developer.
+										{/* <br />
+										& a Software Engineer! */}
+									</span>
+								</div>
 							</div>
-							<h1 className="">
-								<b>SHAUN RAGASA</b>
-							</h1>
-							<div className="items-center justify-evenly sm:space-x-3">
+							<div className="col-span-2 items-center justify-evenly space-x-1 sm:space-x-3">
 								<a
 									href="https://www.linkedin.com/in/shaunragasa/"
 									target="_blank"
@@ -183,7 +177,10 @@ function Nav() {
 						</li>
 					</ul>
 				</div>
-				<div id="expandedNav" className="hidden lg:flex justify-center gap-4 xl:gap-6 font-lexend text-[0.475rem] xl:text-[0.525rem] 2xl:text-[0.65rem] text-center">
+				<div
+					id="expandedNav"
+					className="hidden lg:flex justify-center gap-4 xl:gap-6 font-lexend text-[0.475rem] xl:text-[0.525rem] 2xl:text-[0.65rem] text-center"
+				>
 					<a href="#hero" className={`nav-item ${navActive}`}>
 						HOME
 					</a>
