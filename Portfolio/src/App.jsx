@@ -24,7 +24,6 @@ function App() {
 			<div className="">
 				<ScrollToTop smooth component={<UpArrowLight />} title="Scroll back to top" />
 			</div>
-			<div className="h-screen"></div>
 		</>
 	);
 }
