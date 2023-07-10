@@ -44,7 +44,7 @@ function Hero() {
 					</p>
 				</div>
 				<img
-					className="h-72 w-auto pt-6 place-self-center lg:place-self-end 2xl:place-self-center 2xl:pl-20"
+					className="h-72 w-auto pt-6 2xl:pl-20 place-self-center lg:place-self-end 2xl:place-self-center "
 					src={heroPic}
 					alt="Shaun Ragasa Hero Picture"
 				/>

@@ -109,7 +109,8 @@ function Nav() {
 										A Full-Stack Developer,
 										<br />
 										a Front-End Developer,
-										<br />& a Back-End Developer.
+										<br />
+										& a Back-End Developer.
 										{/* <br />
 										& a Software Engineer! */}
 									</span>
