@@ -15,7 +15,7 @@ build-front-end-job:
     script:
         - npm install
         - cd Portfolio
-        - npm install
+        - npm install --legacy-peer-deps
         - npm run build
         - cp -a dist/. public/
     artifacts:
