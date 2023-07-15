@@ -21,7 +21,7 @@ function App() {
 			<Skills />
 			<Recommendations />
 			<ContactMe />
-			<div className="">
+			<div>
 				<ScrollToTop smooth component={<UpArrowLight />} title="Scroll back to top" />
 			</div>
 		</>
