@@ -1,5 +1,5 @@
 -   Scrapbook theme or plant theme
--   Parallax
+-   Parallax w/ photos of myself
 -   Calendly in contact section
 -   Divide portfolio into section tags
 -   Dialog elements
@@ -14,3 +14,8 @@ CSS Units:
 -   Dark mode
 
 Spotify player idea: - Use embedded spotify player - Craft personal playlist ("my now playing while I code")
+
+About Me:
+    - Add my values as a person
+    - Make it my branding
+    - Who am I?

@@ -109,8 +109,7 @@ function Nav() {
 										A Full-Stack Developer,
 										<br />
 										a Front-End Developer,
-										<br />
-										& a Back-End Developer.
+										<br />& a Back-End Developer.
 										{/* <br />
 										& a Software Engineer! */}
 									</span>
@@ -127,7 +126,7 @@ function Nav() {
 									<i className={`bx bxl-linkedin ${hamburgerIcons}`}></i>
 								</a>
 								<a
-									href="https://gitlab.com/sragasa97"
+									href="https://gitlab.com/sragasadev"
 									target="_blank"
 									rel="noopener noreferrer"
 									alt="Gitlab"
@@ -212,7 +211,7 @@ function Nav() {
 						<i className={`bx bxl-linkedin ${expandedIcons}`}></i>
 					</a>
 					<a
-						href="https://gitlab.com/sragasa97"
+						href="https://gitlab.com/sragasadev"
 						target="_blank"
 						rel="noopener noreferrer"
 						alt="Gitlab"
