@@ -9,6 +9,13 @@ export default {
 			screens: {
 				"3xl": "1800px",
 			},
+			colors: {
+				mainBg: "#faf3dd", // FEFAE0
+				CTA: "#4a7c59",
+				primaryAccent: "#8fc0a9",
+				secondaryAccent: "#c8d5b9",
+				tertiaryAccent: "#68b0ab",
+			},
 			keyframes: {
 				rotatingXS: {
 					"0%, 5%, 95%, 100%": { top: 0 },
@@ -28,11 +35,19 @@ export default {
 					"45%, 50%, 55%": { top: "-50px" },
 					"70%, 75%, 80%": { top: "-75px" },
 				},
+				handWave: {
+					"0%, 60%, 100%": { transform: "rotate(0deg)" },
+					"10%, 30%": { transform: "rotate(14deg)" },
+					"20%": { transform: "rotate(-8deg)" },
+					"40%": { transform: "rotate(-4deg)" },
+					"50%": { transform: "rotate(10deg)" },
+				},
 			},
 			animation: {
 				rotatingXS: "rotatingXS 10s ease-in-out infinite",
 				rotatingSM: "rotatingSM 10s ease infinite",
 				rotatingMD: "rotatingMD 10s ease infinite",
+				handWave: "handWave 2.5s ease infinite",
 			},
 		},
 	},

@@ -5,7 +5,7 @@ nav {
 	position: fixed;
 	z-index: 20;
 	inset: 1.8rem 0px 0px;
-	margin: 0px auto 0px;
+	margin: 0px auto;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -84,12 +84,4 @@ nav {
 	z-index: 10;
 	inset: 3.5rem 0px 0px;
 	margin: 0px auto 0px;
-}
-
-#rotating {
-	overflow: hidden;
-}
-
-#rotating span {
-	position: relative;
 }

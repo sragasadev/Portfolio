@@ -15,7 +15,9 @@ CSS Units:
 
 Spotify player idea: - Use embedded spotify player - Craft personal playlist ("my now playing while I code")
 
-About Me:
-    - Add my values as a person
-    - Make it my branding
-    - Who am I?
+About Me: - Add my values as a person - Make it my branding - Who am I?
+
+Add custom highlighting colors
+Change default pixel size to 16
+
+Change navbar active link to include exactly at y coordinate (e.g., skills will have underline if at y >= skill coordinate)

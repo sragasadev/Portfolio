@@ -21,10 +21,9 @@ body,
 	scroll-behavior: smooth !important;
 }
 
-body,
-#root {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	overflow-x: hidden;
+@layer components {
+	body,
+	#root {
+		@apply flex flex-col items-center overflow-x-hidden
+	}
 }

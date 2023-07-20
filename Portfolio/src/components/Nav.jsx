@@ -11,7 +11,7 @@ function Nav() {
 	const hamburgerMenu = useRef(null);
 	const scrollPosition = useScrollPosition();
 
-	const glassmorphism = "rounded-2xl bg-[rgba(255,255,255,0.2)] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-md";
+	const glassmorphism = "rounded-xl bg-[rgba(255,255,255,0.2)] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-md";
 
 	// expanded classes
 	const expandedIcons =
@@ -24,7 +24,7 @@ function Nav() {
 		"w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-black overflow-hidden text-xl text-black hover:border-[#faf3dd] hover:text-[#faf3dd]";
 
 	const hamburgerItems =
-		"py-2 border-t-2 border-[#faf3dd] hover:bg-[#faf3dd] hover:underline hover:underline-offset-[6px] hover:decoration-2 hover:tracking-widest";
+		"py-2 border-t-2 border-primaryAccent hover:bg-[#faf3dd] hover:underline hover:underline-offset-[6px] hover:decoration-2 hover:tracking-widest";
 
 	const closeMenu = () => {
 		setMenuOpen(false);
@@ -96,14 +96,14 @@ function Nav() {
 					</button>
 				</div>
 				<div id="hamburgerMenu" className={`font-lexend ${menuOpen ? "" : "hidden"}`} ref={hamburgerMenu}>
-					<ul className={`border-2 border-black bg-[#8fc0a9] rounded-xl text-center`}>
+					<ul className={`border-2 border-black bg-mainBg rounded-xl text-center`}>
 						<li className="py-5 grid grid-cols-5 place-items-center">
 							<div className="col-span-3 flex">
 								<div
 									id="rotating"
-									className="h-[15px] leading-[15px] text-[11px] sm:h-[21px] sm:leading-[21px] sm:text-[16px] md:h-[25px] md:leading-[25px] md:text-[20px] tracking-widest"
+									className="h-[15px] leading-[15px] text-[11px] sm:h-[21px] sm:leading-[21px] sm:text-[16px] md:h-[25px] md:leading-[25px] md:text-[20px] tracking-widest overflow-hidden"
 								>
-									<span className="animate-rotatingXS sm:animate-rotatingSM md:animate-rotatingMD">
+									<span className="relative animate-rotatingXS sm:animate-rotatingSM md:animate-rotatingMD">
 										{`Hi I'm Shaun Ragasa!`}
 										<br />
 										A Full-Stack Developer,
