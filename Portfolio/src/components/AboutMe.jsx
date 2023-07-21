@@ -2,7 +2,7 @@ function AboutMe() {
 	return (
 		<section
 			id="aboutme"
-			className="text-center h-[80vh] w-full bg-[#FAF3DD] flex flex-col justify-center border-2 border-[#8FC0A9]"
+			className="text-center h-[80vh] w-full bg-mainBg flex flex-col justify-center border-2 border-primaryAccent"
 		>
 			<h1>ABOUT ME</h1>
 			<h1>🚧 CURRENTLY IN DEVELOPMENT 🚧</h1>

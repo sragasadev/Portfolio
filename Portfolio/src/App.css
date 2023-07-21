@@ -7,18 +7,18 @@
 	}
 
 	.active {
-		@apply text-[#4A7C59]
+		@apply text-primaryAccent
 	}
 
 	.desktopIcons {
-		@apply w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-[#8FC0A9] overflow-hidden text-xl text-[#8FC0A9];
+		@apply w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-primaryAccent overflow-hidden text-xl text-primaryAccent;
 	}
 
 	.mobileIcons {
-		@apply w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-black overflow-hidden text-xl text-black hover:border-[#faf3dd] hover:text-[#faf3dd];
+		@apply w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-black overflow-hidden text-xl text-black hover:border-mainBg hover:text-mainBg;
 	}
 
 	.mobileLinks {
-		@apply py-2 border-t-2 border-primaryAccent hover:bg-[#faf3dd] hover:underline hover:underline-offset-[6px] hover:decoration-2 hover:tracking-widest;
+		@apply py-2 border-t-2 border-primaryAccent hover:bg-mainBg hover:underline hover:underline-offset-[6px] hover:decoration-2 hover:tracking-widest;
 	}
 }

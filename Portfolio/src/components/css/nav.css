@@ -22,7 +22,7 @@ nav {
 
 .nav-item:hover:not(.active) {
 	color: var(--primary-accent-color);
-	text-shadow: 1px 1px 0px black;
+	text-shadow: 1px 1px 0px #8fc0a9;
 }
 
 .nav-item::after {
@@ -64,8 +64,8 @@ nav {
 
 .logoHover a:hover i,
 .logoHover a:hover::before {
-	color: black;
-	border-color: black;
+	color: var(--main-bg-color);
+	border-color: var(--secondary-accent-color);
 }
 
 .logoHover a:hover::before {

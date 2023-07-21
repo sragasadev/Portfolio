@@ -10,11 +10,11 @@ export default {
 				"3xl": "1800px",
 			},
 			colors: {
-				mainBg: "#faf3dd", // FEFAE0
-				CTA: "#4a7c59",
-				primaryAccent: "#8fc0a9",
-				secondaryAccent: "#c8d5b9",
-				tertiaryAccent: "#68b0ab",
+				mainBg: "#faf3dd",
+				CTA: "#bc6c25",
+				primaryAccent: "#4a7c59",
+				secondaryAccent: "#465e51",
+				tertiaryAccent: "#dda15e",
 			},
 			keyframes: {
 				rotatingXS: {

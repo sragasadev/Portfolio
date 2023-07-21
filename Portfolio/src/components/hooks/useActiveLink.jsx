@@ -11,7 +11,7 @@ const useActiveLink = () => {
 			const sectionTop = current.offsetTop - 1;
 			const sectionID = current.getAttribute("id");
 
-			if (ycoord > sectionTop && ycoord <= sectionTop + sectionHeight) {
+			if (ycoord >= sectionTop && ycoord <= sectionTop + sectionHeight - 1) {
 				document.querySelector("#desktopNav a[href*=" + sectionID + "]").classList.add("active");
 				document.querySelector("#desktopNav a[href*=" + sectionID + "]").classList.remove("hover");
 			} else {
