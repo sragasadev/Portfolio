@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import useScrollPosition from "./hooks/useScrollPosition";
 import useActiveLink from "./hooks/useActiveLink";
-import PortfolioIcon from "../assets/portfolio_icon.png";
+import PortfolioIcon from "../assets/portfolio-icon.png";
 import "../components/css/nav.css";
 import "../components/css/hamburgers.css";
 
@@ -10,21 +10,6 @@ function Nav() {
 	const navbar = useRef(null);
 	const hamburgerMenu = useRef(null);
 	const scrollPosition = useScrollPosition();
-
-	const glassmorphism = "rounded-xl bg-[rgba(255,255,255,0.2)] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-md";
-
-	// expanded classes
-	const expandedIcons =
-		"w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-[#8FC0A9] overflow-hidden text-xl text-[#8FC0A9]";
-
-	const navActive = "[&.active]:text-[#4A7C59]";
-
-	// hamburger classes
-	const hamburgerIcons =
-		"w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-black overflow-hidden text-xl text-black hover:border-[#faf3dd] hover:text-[#faf3dd]";
-
-	const hamburgerItems =
-		"py-2 border-t-2 border-primaryAccent hover:bg-[#faf3dd] hover:underline hover:underline-offset-[6px] hover:decoration-2 hover:tracking-widest";
 
 	const closeMenu = () => {
 		setMenuOpen(false);
@@ -73,7 +58,7 @@ function Nav() {
 
 	return (
 		<>
-			<nav className={scrollPosition > 0 ? `${glassmorphism}` : ""} ref={navbar}>
+			<nav className={scrollPosition > 0 ? `glassmorphism` : ""} ref={navbar}>
 				<div>
 					<a href="#hero" onClick={closeMenu}>
 						<img
@@ -84,7 +69,7 @@ function Nav() {
 						/>
 					</a>
 				</div>
-				<div className="lg:hidden flex">
+				<div className="flex lg:hidden">
 					<button
 						className={`hamburger hamburger--spin ${menuOpen ? "is-active" : ""}`}
 						type="button"
@@ -95,8 +80,9 @@ function Nav() {
 						</span>
 					</button>
 				</div>
-				<div id="hamburgerMenu" className={`font-lexend ${menuOpen ? "" : "hidden"}`} ref={hamburgerMenu}>
-					<ul className={`border-2 border-black bg-mainBg rounded-xl text-center`}>
+				{/* Mobile Navigation */}
+				<div id="hamburgerMenu" className={`${menuOpen ? "" : "hidden"}`} ref={hamburgerMenu}>
+					<ul className="border-2 border-black bg-mainBg rounded-xl text-center">
 						<li className="py-5 grid grid-cols-5 place-items-center">
 							<div className="col-span-3 flex">
 								<div
@@ -105,13 +91,12 @@ function Nav() {
 								>
 									<span className="relative animate-rotatingXS sm:animate-rotatingSM md:animate-rotatingMD">
 										{`Hi I'm Shaun Ragasa!`}
+										<span className="animate-handWave origin-[70%_70%] inline-block">👋</span>
 										<br />
 										A Full-Stack Developer,
 										<br />
-										a Front-End Developer,
-										<br />& a Back-End Developer.
-										{/* <br />
-										& a Software Engineer! */}
+										a Front-End Fiend,
+										<br />& a Back-End Beast.
 									</span>
 								</div>
 							</div>
@@ -123,7 +108,7 @@ function Nav() {
 									alt="LinkedIn"
 									title="LinkedIn"
 								>
-									<i className={`bx bxl-linkedin ${hamburgerIcons}`}></i>
+									<i className="bx bxl-linkedin mobileIcons"></i>
 								</a>
 								<a
 									href="https://gitlab.com/sragasadev"
@@ -132,7 +117,7 @@ function Nav() {
 									alt="Gitlab"
 									title="Gitlab"
 								>
-									<i className={`bx bxl-gitlab ${hamburgerIcons}`}></i>
+									<i className="bx bxl-gitlab mobileIcons"></i>
 								</a>
 								<a
 									href="https://drive.google.com/file/d/1PjY6bqQEBeuHqvUC4zZAjB1nhtxbTqUs/view?usp=sharing"
@@ -141,62 +126,64 @@ function Nav() {
 									alt="Resume"
 									title="Resume"
 								>
-									<i className={`bx bx-receipt ${hamburgerIcons}`}></i>
+									<i className="bx bx-receipt mobileIcons"></i>
 								</a>
 							</div>
 						</li>
-						<li className={hamburgerItems}>
+						<li className="mobileLinks">
 							<a href="#hero" onClick={closeMenu}>
 								HOME
 							</a>
 						</li>
-						<li className={hamburgerItems}>
+						<li className="mobileLinks">
 							<a href="#aboutme" onClick={closeMenu}>
 								ABOUT ME
 							</a>
 						</li>
-						<li className={hamburgerItems}>
+						<li className="mobileLinks">
 							<a href="#experience" onClick={closeMenu}>
 								EXPERIENCE
 							</a>
 						</li>
-						<li className={hamburgerItems}>
-							<a href="#skills" onClick={closeMenu}>
-								SKILLS
+						<li className="mobileLinks">
+							<a href="#portfolio" onClick={closeMenu}>
+								PORTFOLIO
 							</a>
 						</li>
-						<li className={hamburgerItems}>
+						<li className="mobileLinks">
 							<a href="#recommendations" onClick={closeMenu}>
 								RECOMMENDATIONS
 							</a>
 						</li>
-						<li className={`${hamburgerItems} rounded-b-xl`}>
+						<li className="mobileLinks rounded-b-xl">
 							<a href="#contactme" onClick={closeMenu}>
 								CONTACT ME
 							</a>
 						</li>
 					</ul>
 				</div>
+				{/* Desktop Navigation */}
 				<div
-					id="expandedNav"
-					className="hidden lg:flex justify-center gap-4 xl:gap-6 font-lexend text-[0.475rem] xl:text-[0.525rem] 2xl:text-[0.65rem] text-center"
+					id="desktopNav"
+					className="hidden lg:flex justify-center gap-4 xl:gap-6 text-[0.475rem] xl:text-[0.525rem] 2xl:text-[0.65rem] text-center"
 				>
-					<a href="#hero" className={`nav-item ${navActive}`}>
+					<a href="#hero" className="nav-item">
 						HOME
 					</a>
-					<a href="#aboutme" className={`nav-item ${navActive}`}>
+					<a href="#aboutme" className="nav-item">
 						ABOUT ME
 					</a>
-					<a href="#experience" className={`nav-item ${navActive}`}>
+					<a href="#experience" className="nav-item">
 						EXPERIENCE
 					</a>
-					<a href="#skills" className={`nav-item ${navActive}`}>
-						SKILLS
+					{/* Add dropdown for skills */}
+					<a href="#portfolio" className="nav-item">
+						PORTFOLIO
 					</a>
-					<a href="#recommendations" className={`nav-item ${navActive}`}>
+					<a href="#recommendations" className="nav-item">
 						RECOMMENDATIONS
 					</a>
-					<a href="#contactme" className={`nav-item ${navActive}`}>
+					<a href="#contactme" className="nav-item">
 						CONTACT ME
 					</a>
 				</div>
@@ -208,7 +195,7 @@ function Nav() {
 						alt="LinkedIn"
 						title="LinkedIn"
 					>
-						<i className={`bx bxl-linkedin ${expandedIcons}`}></i>
+						<i className="bx bxl-linkedin desktopIcons"></i>
 					</a>
 					<a
 						href="https://gitlab.com/sragasadev"
@@ -217,7 +204,7 @@ function Nav() {
 						alt="Gitlab"
 						title="Gitlab"
 					>
-						<i className={`bx bxl-gitlab ${expandedIcons}`}></i>
+						<i className="bx bxl-gitlab desktopIcons"></i>
 					</a>
 					<a
 						href="https://drive.google.com/file/d/1PjY6bqQEBeuHqvUC4zZAjB1nhtxbTqUs/view?usp=sharing"
@@ -226,7 +213,7 @@ function Nav() {
 						alt="Resume"
 						title="Resume"
 					>
-						<i className={`bx bx-receipt ${expandedIcons}`}></i>
+						<i className="bx bx-receipt desktopIcons"></i>
 					</a>
 				</div>
 			</nav>

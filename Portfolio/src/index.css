@@ -21,9 +21,19 @@ body,
 	scroll-behavior: smooth !important;
 }
 
+section {
+	height: max-content;
+	width: 100%;
+}
+
+.portfolioComponent {
+	width: clamp(320px, 80%, 1536px);
+	margin: 0 auto;
+}
+
 @layer components {
 	body,
 	#root {
-		@apply flex flex-col items-center overflow-x-hidden
+		@apply flex flex-col items-center overflow-x-hidden font-lexend bg-mainBg;
 	}
 }

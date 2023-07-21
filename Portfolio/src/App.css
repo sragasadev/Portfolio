@@ -1,9 +1,24 @@
-section {
-	height: max-content;
-	width: 100%;
-}
+@tailwind components;
 
-.portfolioComponent {
-	width: clamp(320px, 80%, 1536px);
-	margin: 0 auto;
+@layer components {
+	/* Navigation Classes */
+	.glassmorphism {
+		@apply rounded-xl bg-[rgba(255,255,255,0.2)] shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-md;
+	}
+
+	.active {
+		@apply text-[#4A7C59]
+	}
+
+	.desktopIcons {
+		@apply w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-[#8FC0A9] overflow-hidden text-xl text-[#8FC0A9];
+	}
+
+	.mobileIcons {
+		@apply w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-black overflow-hidden text-xl text-black hover:border-[#faf3dd] hover:text-[#faf3dd];
+	}
+
+	.mobileLinks {
+		@apply py-2 border-t-2 border-primaryAccent hover:bg-[#faf3dd] hover:underline hover:underline-offset-[6px] hover:decoration-2 hover:tracking-widest;
+	}
 }

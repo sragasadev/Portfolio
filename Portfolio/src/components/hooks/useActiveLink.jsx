@@ -11,12 +11,12 @@ const useActiveLink = () => {
 			const sectionTop = current.offsetTop - 1;
 			const sectionID = current.getAttribute("id");
 
-			if (ycoord > sectionTop && scrollY <= sectionTop + sectionHeight) {
-				document.querySelector("#expandedNav a[href*=" + sectionID + "]").classList.add("active");
-				document.querySelector("#expandedNav a[href*=" + sectionID + "]").classList.remove("hover");
+			if (ycoord > sectionTop && ycoord <= sectionTop + sectionHeight) {
+				document.querySelector("#desktopNav a[href*=" + sectionID + "]").classList.add("active");
+				document.querySelector("#desktopNav a[href*=" + sectionID + "]").classList.remove("hover");
 			} else {
-				document.querySelector("#expandedNav a[href*=" + sectionID + "]").classList.remove("active");
-				document.querySelector("#expandedNav a[href*=" + sectionID + "]").classList.add("hover");
+				document.querySelector("#desktopNav a[href*=" + sectionID + "]").classList.remove("active");
+				document.querySelector("#desktopNav a[href*=" + sectionID + "]").classList.add("hover");
 			}
 		});
 	}, [sections]);
