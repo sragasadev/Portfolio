@@ -111,3 +111,24 @@ nav {
 	inset: 3.5rem 0px 0px;
 	margin: 0px auto 0px;
 }
+
+/* Dark Mode Toggle */
+.darkToggle {
+	--size: 2rem;
+
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+
+	height: var(--size);
+	width: var(--size);
+	box-shadow: inset calc(var(--size)*0.35) calc(var(--size)*-0.25) 0;
+	border-radius: 9999px;
+	color: #e5e5ff;
+
+	transition: all 500ms;
+
+	/* &:checked {
+		--ray-size: calc(var(--size)*-0.4)
+	} */
+}
