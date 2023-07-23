@@ -82,7 +82,7 @@ function Nav() {
 				</div>
 				{/* Mobile Navigation */}
 				<div id="hamburgerMenu" className={`${menuOpen ? "" : "hidden"}`} ref={hamburgerMenu}>
-					<ul className="border-2 border-black bg-mainBg rounded-xl text-center">
+					<ul className="border-2 border-black dark:border-mainBg bg-mainBg dark:bg-darkMainBg rounded-xl text-center">
 						<li className="py-5 grid grid-cols-5 place-items-center">
 							<div className="col-span-3 flex">
 								<div

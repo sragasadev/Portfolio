@@ -12,6 +12,16 @@
 	--tertiary-accent-color: #dda15e;
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--main-bg-color: #000033;
+		--cta-color: #faf3dd;
+		--primary-accent-color: #7d7a88;
+		--secondary-accent-color: #3f3d5e;
+		--tertiary-accent-color: #bcb6b3;
+	}
+}
+
 html,
 body,
 #root {
@@ -34,10 +44,10 @@ section {
 @layer components {
 	body,
 	#root {
-		@apply flex flex-col items-center overflow-x-hidden font-lexend bg-mainBg;
+		@apply flex flex-col items-center overflow-x-hidden dark:text-darkCTA font-lexend bg-mainBg dark:bg-darkMainBg;
 	}
 
 	::selection {
-		@apply bg-primaryAccent text-mainBg
+		@apply bg-primaryAccent dark:bg-darkCTA text-mainBg dark:text-darkMainBg;
 	}
 }

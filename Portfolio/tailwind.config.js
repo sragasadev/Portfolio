@@ -15,6 +15,11 @@ export default {
 				primaryAccent: "#4a7c59",
 				secondaryAccent: "#465e51",
 				tertiaryAccent: "#dda15e",
+				darkMainBg: "#000033",
+				darkCTA: "#faf3dd",
+				darkPrimaryAccent: "#7d7a88",
+				darkSecondaryAccent: "#3f3d5e",
+				darkTertiaryAccent: "#bcb6b3",
 			},
 			keyframes: {
 				rotatingXS: {

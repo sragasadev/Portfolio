@@ -20,9 +20,22 @@ nav {
 	transition: 0.25s;
 }
 
+@media (prefers-color-scheme: dark) {
+	.nav-item {
+		color: var(--cta-color);
+	}
+}
+
 .nav-item:hover:not(.active) {
 	color: var(--primary-accent-color);
 	text-shadow: 1px 1px 0px #8fc0a9;
+}
+
+@media (prefers-color-scheme: dark) {
+	.nav-item:hover:not(.active) {
+		color: var(--cta-color);
+		text-shadow: 1px 1px 0px #8fc0a9;
+	}
 }
 
 .nav-item::after {
@@ -62,10 +75,23 @@ nav {
 	border-radius: 9999px;
 }
 
+@media (prefers-color-scheme: dark) {
+	.logoHover a::before {
+		background-color: var(--cta-color);
+	}
+}
+
 .logoHover a:hover i,
 .logoHover a:hover::before {
 	color: var(--main-bg-color);
 	border-color: var(--secondary-accent-color);
+}
+
+@media (prefers-color-scheme: dark) {
+	.logoHover a:hover i,
+	.logoHover a:hover::before {
+		border-color: var(--tertiary-accent-color);
+	}
 }
 
 .logoHover a:hover::before {

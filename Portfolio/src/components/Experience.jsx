@@ -4,7 +4,7 @@ function Experience() {
 	return (
 		<section
 			id="experience"
-			className="text-center h-[160vh] w-full bg-mainBg flex flex-col justify-center border-2 border-primaryAccent"
+			className="text-center h-[160vh] w-full flex flex-col justify-center border-2 border-primaryAccent"
 		>
 			<h1>EXPERIENCE</h1>
 			<h1>🚧 CURRENTLY IN DEVELOPMENT 🚧</h1>

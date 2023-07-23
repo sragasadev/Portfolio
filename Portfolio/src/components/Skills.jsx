@@ -1,6 +1,6 @@
 function Skills() {
 	return (
-		<section className="text-center h-[80vh] w-full bg-mainBg flex flex-col justify-center border-2 border-primaryAccent">
+		<section className="text-center h-[80vh] w-full flex flex-col justify-center border-2 border-primaryAccent">
 			<h1>SKILLS</h1>
 			<h1>🚧 CURRENTLY IN DEVELOPMENT 🚧</h1>
 			<p>

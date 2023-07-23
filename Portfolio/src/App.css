@@ -7,18 +7,18 @@
 	}
 
 	.active {
-		@apply text-primaryAccent
+		@apply text-primaryAccent dark:text-darkCTA
 	}
 
 	.desktopIcons {
-		@apply w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-primaryAccent overflow-hidden text-xl text-primaryAccent;
+		@apply w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-primaryAccent dark:border-darkCTA overflow-hidden text-xl text-primaryAccent dark:text-darkCTA;
 	}
 
 	.mobileIcons {
-		@apply w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-black overflow-hidden text-xl text-black hover:border-mainBg hover:text-mainBg;
+		@apply w-8 h-8 relative inline-flex justify-center items-center rounded-full bg-transparent border-2 border-black dark:border-darkCTA overflow-hidden text-xl text-black dark:text-darkCTA hover:border-mainBg dark:hover:border-darkSecondaryAccent hover:text-mainBg dark:hover:text-darkSecondaryAccent dark:hover:bg-darkCTA;
 	}
 
 	.mobileLinks {
-		@apply py-2 border-t-2 border-primaryAccent hover:bg-mainBg hover:underline hover:underline-offset-[6px] hover:decoration-2 hover:tracking-widest;
+		@apply py-2 border-t-2 border-primaryAccent dark:border-darkCTA hover:bg-mainBg hover:underline hover:underline-offset-[6px] hover:decoration-2 hover:tracking-widest dark:hover:text-darkMainBg dark:hover:decoration-darkMainBg;
 	}
 }
