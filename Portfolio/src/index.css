@@ -36,4 +36,8 @@ section {
 	#root {
 		@apply flex flex-col items-center overflow-x-hidden font-lexend bg-mainBg;
 	}
+
+	::selection {
+		@apply bg-primaryAccent text-mainBg
+	}
 }

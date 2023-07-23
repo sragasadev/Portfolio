@@ -3,7 +3,6 @@
     -   Parallax of projects
         -   Background is solid color w/ text (title of section & cards are strewn throughout)
 -   Calendly in contact section
--   Divide portfolio into section tags
 -   Dialog elements
 
 CSS Units:
