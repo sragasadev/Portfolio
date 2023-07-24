@@ -17,7 +17,7 @@ function Hero() {
 						<h1 className="text-4xl">I'm a </h1>
 						<span className="text-3xl"></span>
 					</div>
-					<p className="mt-auto tracking-wide text-justify [text-align-last:center] lg:[text-align-last:justify]">
+					<p className="mt-auto tracking-wide text-justify [text-align-last:center] lg:[text-align-last:left]">
 						I am a full-stack software engineer with a drive for life-long learning and improving my skill
 						set. I have experience developing several full-stack applications in an Agile environment.
 					</p>
