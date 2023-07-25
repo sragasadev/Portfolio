@@ -3,10 +3,7 @@ import "../App.css";
 
 function Hero() {
 	return (
-		<section
-			id="hero"
-			className="h-[100vh] max-h-[700px] pt-28 pb-8 sm:px-20"
-		>
+		<section id="hero" className="h-[100vh] max-h-[700px] pt-28 pb-8 sm:px-20">
 			<div className="portfolioComponent grid grid-cols-1 lg:grid-cols-2">
 				<div className="py-4 flex flex-col items-center lg:items-start">
 					<h2 className="tracking-wider">
