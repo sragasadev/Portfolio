@@ -50,14 +50,16 @@ function Recommendations() {
 	return (
 		<section
 			id="recommendations"
-			className="text-center h-[80vh] w-full flex flex-col justify-center border-2 border-primaryAccent"
+			className="text-center w-full flex flex-col justify-center border-2 border-primaryAccent"
 		>
 			<h1>RECOMMENDATIONS</h1>
 			<h1>🚧 CURRENTLY IN DEVELOPMENT 🚧</h1>
-			<div className="flex">
+			<div className="flex justify-around">
 				{recommendations.map((rec, index) => (
-					<div className="" key={index}>
-						{rec.name}
+					<div className="border-2 border-primaryAccent rounded-lg p-4 flex flex-col space-y-2 text-sm" key={index}>
+						<h1>{rec.name}</h1>
+						<h2>{rec.title}</h2>
+						<p>{rec.recommendation}</p>
 					</div>
 				))}
 			</div>
