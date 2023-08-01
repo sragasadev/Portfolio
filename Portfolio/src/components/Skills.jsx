@@ -1,6 +1,57 @@
 function Skills() {
+	const skills = [
+		{
+			skill: "",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "",
+			picture: "",
+			link: "",
+			description: "",
+		},
+	];
+
 	return (
-		<section className="text-center h-[80vh] w-full flex flex-col justify-center border-2 border-primaryAccent">
+		<section className="text-center w-full flex flex-col justify-center border-2 border-primaryAccent">
 			<h1>SKILLS</h1>
 			<h1>🚧 CURRENTLY IN DEVELOPMENT 🚧</h1>
 			<p>
@@ -8,6 +59,15 @@ function Skills() {
 				reprehenderit eaque ducimus, sit error tenetur cupiditate veritatis illo illum accusantium beatae eum
 				rem fugit.
 			</p>
+			<div className="flex">
+				{skills.map((skill, index) => (
+					<div className="" key={index}>
+						<h1>{skill.skill}</h1>
+						<img className="h-2 w-2" src={skill.picture} alt={skill.skill} />
+						<h3>{skill.description}</h3>
+					</div>
+				))}
+			</div>
 		</section>
 	);
 }
