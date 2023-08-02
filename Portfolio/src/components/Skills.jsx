@@ -1,49 +1,49 @@
 function Skills() {
 	const skills = [
 		{
-			skill: "",
+			skill: "Python",
 			picture: "",
 			link: "",
 			description: "",
 		},
 		{
-			skill: "",
+			skill: "JavaScript",
 			picture: "",
 			link: "",
 			description: "",
 		},
 		{
-			skill: "",
+			skill: "TypeScript",
 			picture: "",
 			link: "",
 			description: "",
 		},
 		{
-			skill: "",
+			skill: "React",
 			picture: "",
 			link: "",
 			description: "",
 		},
 		{
-			skill: "",
+			skill: "Django",
 			picture: "",
 			link: "",
 			description: "",
 		},
 		{
-			skill: "",
+			skill: "FastAPI",
 			picture: "",
 			link: "",
 			description: "",
 		},
 		{
-			skill: "",
+			skill: "Docker",
 			picture: "",
 			link: "",
 			description: "",
 		},
 		{
-			skill: "",
+			skill: "Git",
 			picture: "",
 			link: "",
 			description: "",
