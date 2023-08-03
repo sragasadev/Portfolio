@@ -1,4 +1,5 @@
 function Skills() {
+	// Include: HTML, CSS, Tailwind, Bootstrap, MongoDB, PostgreSQL, SQL, Redux
 	const skills = [
 		{
 			skill: "Python",
