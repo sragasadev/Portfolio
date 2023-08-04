@@ -12,7 +12,7 @@ function Hero() {
 					</h2>
 					<div className="mt-2 py-2">
 						<h1 className="text-4xl">I'm a </h1>
-						<span className="text-3xl"></span>
+						<span className="text-3xl">software engineer.</span>
 					</div>
 					<p className="mt-auto tracking-wide text-justify [text-align-last:center] lg:[text-align-last:left]">
 						I am a full-stack software engineer with a drive for life-long learning and improving my skill
