@@ -11,6 +11,10 @@ function ContactMe() {
 				reprehenderit eaque ducimus, sit error tenetur cupiditate veritatis illo illum accusantium beatae eum
 				rem fugit.
 			</p>
+			<h2>Email</h2>
+			<h3>sragasadev@gmail.com</h3>
+			<h2>Phone Number</h2>
+			<h3>(305) 746 - 9830</h3>
 		</section>
 	);
 }
