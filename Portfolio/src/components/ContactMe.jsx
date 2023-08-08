@@ -15,6 +15,8 @@ function ContactMe() {
 			<h3>sragasadev@gmail.com</h3>
 			<h2>Phone Number</h2>
 			<h3>(305) 746 - 9830</h3>
+			<h2>Based In</h2>
+			<h3>Miami, Florida</h3>
 		</section>
 	);
 }
