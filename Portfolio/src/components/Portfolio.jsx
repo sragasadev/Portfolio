@@ -1,5 +1,6 @@
 function Portfolio() {
 	return (
+		// Move NETWork International; Vibe Check
 		<section
 			id="portfolio"
 			className="text-center h-[80vh] w-full flex flex-col justify-center border-2 border-primaryAccent"
