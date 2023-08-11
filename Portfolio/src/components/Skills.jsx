@@ -60,9 +60,9 @@ function Skills() {
 				reprehenderit eaque ducimus, sit error tenetur cupiditate veritatis illo illum accusantium beatae eum
 				rem fugit.
 			</p>
-			<div className="flex">
+			<div className="flex justify-around">
 				{skills.map((skill, index) => (
-					<div className="" key={index}>
+					<div className="flex flex-col space-y-4" key={index}>
 						<h1>{skill.skill}</h1>
 						<img className="h-2 w-2" src={skill.picture} alt={skill.skill} />
 						<h3>{skill.description}</h3>
