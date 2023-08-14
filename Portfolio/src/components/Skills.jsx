@@ -63,9 +63,9 @@ function Skills() {
 			<div className="flex justify-around">
 				{skills.map((skill, index) => (
 					<div className="flex flex-col space-y-4" key={index}>
-						<h1>{skill.skill}</h1>
-						<img className="h-2 w-2" src={skill.picture} alt={skill.skill} />
-						<h3>{skill.description}</h3>
+						<h1 className="text-center">{skill.skill}</h1>
+						<img className="h-2 w-2 mx-auto" src={skill.picture} alt={skill.skill} />
+						<h3 className="text-center">{skill.description}</h3>
 					</div>
 				))}
 			</div>
