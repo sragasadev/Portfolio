@@ -55,11 +55,6 @@ function Skills() {
 		<section className="text-center w-full flex flex-col justify-center border-2 border-primaryAccent">
 			<h1>SKILLS</h1>
 			<h1>🚧 CURRENTLY IN DEVELOPMENT 🚧</h1>
-			<p>
-				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Suscipit, cum quas dolore, eos harum quibusdam
-				reprehenderit eaque ducimus, sit error tenetur cupiditate veritatis illo illum accusantium beatae eum
-				rem fugit.
-			</p>
 			<div className="flex justify-around">
 				{skills.map((skill, index) => (
 					<div className="flex flex-col space-y-4" key={index}>
