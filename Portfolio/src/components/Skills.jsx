@@ -1,5 +1,4 @@
 function Skills() {
-	// Include: HTML, CSS, Tailwind, Bootstrap, MongoDB, PostgreSQL, SQL, Redux
 	const skills = [
 		{
 			skill: "Python",
@@ -45,6 +44,48 @@ function Skills() {
 		},
 		{
 			skill: "Git",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "HTML",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "CSS",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "Tailwind",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "Bootstrap",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "MongoDB",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "PostgreSQL",
+			picture: "",
+			link: "",
+			description: "",
+		},
+		{
+			skill: "Redux.js",
 			picture: "",
 			link: "",
 			description: "",
